@@ -64,8 +64,8 @@ public class Mole : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(ShowHide(startPos, endPos));
         CreateNext();
+        StartCoroutine(ShowHide(startPos, endPos));
     }
 
     private void OnMouseDown()
@@ -121,7 +121,7 @@ public class Mole : MonoBehaviour
 
     public void Hide()
     {
-
+        transform.localPosition = startPos;
     }
 
     public void CreateNext()
